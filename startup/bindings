@@ -1,0 +1,14 @@
+" vim:ft=vim:
+"
+nmap <C-Tab> gt 
+nmap <C-S-Tab> gT 
+nmap <F1> :NERDTreeToggle<CR>
+nmap <F2> :TagbarToggle<CR>
+nmap <F3> :CtrlP .<CR>
+nmap <F4> :CtrlPBuffer<CR>
+nmap <A-1> :NERDTreeFind<CR>
+nmap <C-K> \ci
+nmap <F9> :w<CR>:make<CR>
+nmap <F10> :silent !%:t:r.exe<CR>
+nmap <F11> :mks! ~/.vimsess<CR>
+nmap <F12> :so ~/.vimsess<CR>

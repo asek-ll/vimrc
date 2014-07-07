@@ -1,0 +1,94 @@
+" vim:ft=vim:
+filetype off    
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"Bundle 'gmarik/vundle'
+Bundle 'asek-ll/asek-ll.vim'
+
+Bundle 'digitaltoad/vim-jade.git'
+Bundle 'kchmck/vim-coffee-script.git'
+  let coffee_make_options = '--bare'
+
+Bundle 'heavenshell/vim-jsdoc.git'
+  let g:jsdoc_additional_descriptions = 1
+  let g:jsdoc_allow_input_prompt = 1
+
+"Bundle "pangloss/vim-javascript"
+
+"Bundle "maksimr/vim-jsbeautify"
+"let g:config_Beautifier = {}
+"let g:config_Beautifier.js = {
+      "\ 'indent_style': 'space',
+      "\ 'indent_size' : '2' }
+
+"Bundle "einars/js-beautify"
+"Bundle "marijnh/tern_for_vim"
+
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'majutsushi/tagbar.git'
+
+Bundle 'kien/ctrlp.vim.git'
+  let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/](\.git|_x)$'
+        \ }
+
+Bundle 'spf13/PIV.git'
+  let g:DisableAutoPHPFolding = 1 
+Bundle 'thinca/vim-template.git'
+Bundle 'tpope/vim-surround'
+
+Bundle 'bling/vim-airline'
+  let g:airline_theme='dark'
+  set laststatus=2
+
+"snippets
+"Bundle 'SirVer/ultisnips.git'
+
+"Bundle 'msanders/snipmate.vim.git'
+  "let g:snippets_dir=$VIM.'/vimfiles/snippets'
+
+Bundle 'drmingdrmer/xptemplate.git'
+  let g:xptemplate_key='<Tab>'
+  let g:xptemplate_nav_next = '<C-j>'
+  let g:xptemplate_nav_prev = '<C-k>'
+  let g:xptemplate_highlight = ''
+  "let g:xptemplate_brace_complete = 1
+
+"project
+Bundle 'plasticboy/vim-markdown.git'
+
+"syntax
+Bundle 'scrooloose/syntastic.git'
+  let g:syntastic_enable_signs=1 
+  let g:syntastic_php_checkers=['php']
+  let g:syntastic_css_checkers=['csslint', 'prettycss']
+  let g:syntastic_javascript_jslint_conf = "--nomen --sloppy --white --vars --plusplus"
+  let g:syntastic_java_checkstyle_classpath = $VIMRUNTIME.'\checkstyle-5.5-all.jar'
+  let g:syntastic_java_checkstyle_conf_file = 'D:/_programs/paps/CommonFiles/cygwin/home/den/sun_checks.xml'
+
+"Bundle 'Valloric/YouCompleteMe.git'
+Bundle 'Raimondi/delimitMate.git'
+  let g:delimitMate_expand_cr = 1
+  let g:delimitMate_expand_space = 1
+  let g:delimitMate_matchpairs = "(:),[:],{:}"
+
+Bundle 'Shougo/neocomplete.vim'
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+Bundle 'Shougo/vimproc.vim'
+  let g:vimproc#dll_path = $HOME.'\.vim\bundle\vimproc.vim\autoload\vimproc_win32.dll'
+
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimshell.vim'
+
+Bundle 'godlygeek/tabular'
+
+Bundle 'tpope/vim-fugitive'
+
+filetype plugin on
