@@ -1,44 +1,74 @@
 " vim:ft=vim:
-filetype off    
+"Shougo
+"NeoBundle 'Shougo/neocomplete.vim'
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_smart_case = 1
 
-set rtp+=~/.vim/bundle/neobundle.vim/
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell.vim'
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'asek-ll/asek-ll.vim'
-
-NeoBundle 'digitaltoad/vim-jade.git'
-NeoBundle 'kchmck/vim-coffee-script.git'
-  let coffee_make_options = '--bare'
-
-NeoBundle 'heavenshell/vim-jsdoc.git'
-  let g:jsdoc_additional_descriptions = 1
-  let g:jsdoc_allow_input_prompt = 1
-
-"NeoBundle "pangloss/vim-javascript"
-
-"NeoBundle "maksimr/vim-jsbeautify"
-"let g:config_Beautifier = {}
-"let g:config_Beautifier.js = {
-      "\ 'indent_style': 'space',
-      "\ 'indent_size' : '2' }
-
-"NeoBundle "einars/js-beautify"
-"NeoBundle "marijnh/tern_for_vim"
-
+"common
 NeoBundle 'scrooloose/nerdtree.git'
+nmap <F1> :NERDTreeToggle<CR>
+nmap <A-1> :NERDTreeFind<CR>
+
 NeoBundle 'scrooloose/nerdcommenter.git'
+nmap <C-K> <leader>ci
+
 NeoBundle 'majutsushi/tagbar.git'
+nmap <F2> :TagbarToggle<CR>
+
+NeoBundle 'scrooloose/syntastic.git'
+  let g:syntastic_enable_signs=1 
+  let g:syntastic_php_checkers=['php']
+  let g:syntastic_css_checkers=['csslint', 'prettycss']
+  let g:syntastic_javascript_jslint_conf = "--nomen --sloppy --white --vars --plusplus"
+
+NeoBundle 'Raimondi/delimitMate.git'
+  let g:delimitMate_expand_cr = 1
+  let g:delimitMate_expand_space = 1
+  let g:delimitMate_matchpairs = "(:),[:],{:}"
+
+NeoBundle 'godlygeek/tabular'
+
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'Lokaltog/vim-easymotion'
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_enable_on_vim_startup = 1
 
 NeoBundle 'kien/ctrlp.vim.git'
   let g:ctrlp_custom_ignore = {
         \ 'dir':  '\v[\/](\.git|_x)$'
         \ }
 
-NeoBundle 'spf13/PIV.git'
-  let g:DisableAutoPHPFolding = 1 
+nmap <F3> :CtrlP .<CR>
+nmap <F4> :CtrlPBuffer<CR>
+nmap <F5> :CtrlPMRUFiles<CR>
+
 NeoBundle 'thinca/vim-template.git'
+au User plugin-template-loaded call s:template_keywords()
+function! s:template_keywords()
+  if search('${name}')
+    silent %s/\${name}/\=expand('%:t:r')/g
+  endif
+  if search('${fullname}')
+    silent %s/\${fullname}/\=expand('%:t')/g
+  endif
+  if search('${user}')
+    silent %s/\${user}/Denis Blokhin/g
+  endif
+  if search('${date}')
+    silent %s/\${date}/\=strftime('%Y-%m-%d')/g
+  endif
+  if search('${time}')
+    silent %s/\${time}/\=strftime('%H:%M:%S')/g
+  endif
+endfunction
+
 NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'bling/vim-airline'
@@ -58,40 +88,39 @@ NeoBundle 'drmingdrmer/xptemplate.git'
   let g:xptemplate_highlight = ''
   "let g:xptemplate_brace_complete = 1
 
-"project
+"javascript
+NeoBundle 'heavenshell/vim-jsdoc.git'
+  let g:jsdoc_additional_descriptions = 1
+  let g:jsdoc_allow_input_prompt = 1
+
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'vim-scripts/JavaScript-Indent'
+au FileType javascript call JavaScriptFold()
+
+"NeoBundle "pangloss/vim-javascript"
+
+"NeoBundle "maksimr/vim-jsbeautify"
+"let g:config_Beautifier = {}
+"let g:config_Beautifier.js = {
+      "\ 'indent_style': 'space',
+      "\ 'indent_size' : '2' }
+
+"NeoBundle "einars/js-beautify"
+"NeoBundle "marijnh/tern_for_vim"
+
+"php
+NeoBundle 'spf13/PIV.git'
+  let g:DisableAutoPHPFolding = 1 
+au BufRead,BufNewFile *.inc set ft=php
+au BufRead,BufNewFile *.install set ft=php
+
+"markdown
 NeoBundle 'plasticboy/vim-markdown.git'
 
-"syntax
-NeoBundle 'scrooloose/syntastic.git'
-  let g:syntastic_enable_signs=1 
-  let g:syntastic_php_checkers=['php']
-  let g:syntastic_css_checkers=['csslint', 'prettycss']
-  let g:syntastic_javascript_jslint_conf = "--nomen --sloppy --white --vars --plusplus"
-  let g:syntastic_java_checkstyle_classpath = $VIMRUNTIME.'\checkstyle-5.5-all.jar'
-  let g:syntastic_java_checkstyle_conf_file = 'D:/_programs/paps/CommonFiles/cygwin/home/den/sun_checks.xml'
+"jade
+NeoBundle 'digitaltoad/vim-jade.git'
 
-"NeoBundle 'Valloric/YouCompleteMe.git'
-NeoBundle 'Raimondi/delimitMate.git'
-  let g:delimitMate_expand_cr = 1
-  let g:delimitMate_expand_space = 1
-  let g:delimitMate_matchpairs = "(:),[:],{:}"
-
-NeoBundle 'Shougo/neocomplete.vim'
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-NeoBundle 'Shougo/vimproc.vim'
-  let g:vimproc#dll_path = $HOME.'\.vim\NeoBundle\vimproc.vim\autoload\vimproc_win32.dll'
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimshell.vim'
-
-NeoBundle 'godlygeek/tabular'
-
-NeoBundle 'tpope/vim-fugitive'
-
-call neobundle#end()
-
-filetype plugin on
+"coffe-script
+NeoBundle 'kchmck/vim-coffee-script.git'
+  let coffee_make_options = '--bare'
+au BufWritePost *.coffee silent CoffeeMake!

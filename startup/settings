@@ -75,7 +75,6 @@ set ignorecase
 
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
 
-
 "XTERM
 if &term =~ "xterm"
   "256 color --
@@ -90,3 +89,28 @@ if &term =~ "xterm"
     let &t_Sb="\ESC[4%dm"
   endif
 endif
+
+if has("autocmd")
+  filetype plugin indent on
+  augroup vimrc
+    au!
+
+    au BufWritePost vimrc :so $MYVIMRC
+
+    au VimLeave * :mks! ~/.lastvimsess
+    "au VimEnter * :so! ~/.lastvimsess
+
+  augroup END
+else
+  set autoindent " always set autoindenting on
+endif " has("autocmd")
+
+nmap <C-Tab> gt 
+nmap <C-S-Tab> gT 
+
+nmap <leader>p "0p
+vmap <leader>p "0p
+
+nmap <F10> :so ~/.lastvimsess<CR>
+nmap <F11> :mks! ~/.vimsess<CR>
+nmap <F12> :so ~/.vimsess<CR>

@@ -1,0 +1,15 @@
+﻿" vim:ft=vim:
+filetype off    
+
+set rtp+=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'asek-ll/asek-ll.vim'
+
+call neobundle#end()
+
+filetype plugin on
+
+source ~/.vim/startup/settings
