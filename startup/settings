@@ -10,7 +10,7 @@ set incsearch
 
 set clipboard=unnamed
 set wildmenu
-set listchars=eol:¬
+set listchars=eol:¬,tab:>-,nbsp:%
 set list
 
 set foldlevelstart=3

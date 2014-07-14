@@ -1,4 +1,6 @@
 ﻿" vim:ft=vim:
+set nocompatible
+
 filetype off    
 
 set rtp+=~/.vim/bundle/neobundle.vim/
