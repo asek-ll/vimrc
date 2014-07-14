@@ -1,11 +1,13 @@
 ﻿" vim:ft=vim:
+
+let $VIMBASE="~/.vim"
 set nocompatible
 
 filetype off    
 
-set rtp+=~/.vim/bundle/neobundle.vim/
+set rtp+=$VIMBASE/bundle/neobundle.vim/
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand($VIMBASE.'/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'asek-ll/asek-ll.vim'
@@ -14,4 +16,4 @@ call neobundle#end()
 
 filetype plugin on
 
-source ~/.vim/startup/settings
+source $VIMBASE/startup/settings

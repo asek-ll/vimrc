@@ -15,8 +15,8 @@ set list
 
 set foldlevelstart=3
 
-set backupdir=~/.vim/.vimbackup
-set directory=~/.vim/.vimbackup
+set backupdir=$VIMBASE/.vimbackup
+set directory=$VIMBASE/.vimbackup
 
 if &t_Co > 2 || has("gui_running")
   syntax on
