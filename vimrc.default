@@ -1,6 +1,6 @@
 ﻿" vim:ft=vim:
 
-let $VIMBASE="~/.vim"
+let $VIMBASE= $HOME . "/.vim"
 set nocompatible
 
 filetype off    
