@@ -1,0 +1,5 @@
+" vim:ft=vim:
+
+NeoBundle 'kchmck/vim-coffee-script.git'
+  let coffee_make_options = '--bare'
+au BufWritePost *.coffee silent CoffeeMake!

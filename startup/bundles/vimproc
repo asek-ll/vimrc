@@ -1,0 +1,11 @@
+" vim:ft=vim:
+
+"Shougo
+"NeoBundle 'Shougo/neocomplete.vim'
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_smart_case = 1
+
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell.vim'

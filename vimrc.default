@@ -1,6 +1,6 @@
 ﻿" vim:ft=vim:
 
-let $VIMBASE= $HOME . "/.vim"
+let $VIMBASE=$HOME."/.vim"
 set nocompatible
 
 filetype off    
@@ -11,6 +11,9 @@ call neobundle#begin(expand($VIMBASE.'/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'asek-ll/asek-ll.vim'
+
+source $VIMBASE/startup/bundles/base
+"source $VIMBASE/startup/bundles/programming
 
 call neobundle#end()
 

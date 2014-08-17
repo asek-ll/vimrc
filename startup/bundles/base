@@ -1,0 +1,56 @@
+" vim:ft=vim:
+
+NeoBundle 'scrooloose/nerdtree.git'
+nmap <F1> :NERDTreeToggle<CR>
+nmap <A-1> :NERDTreeFind<CR>
+
+NeoBundle 'Lokaltog/vim-easymotion'
+
+NeoBundle 'kien/ctrlp.vim.git'
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/](\.git|_x)$'
+      \ }
+
+nmap <F3> :CtrlP .<CR>
+nmap <F4> :CtrlPBuffer<CR>
+nmap <F5> :CtrlPMRUFiles<CR>
+
+NeoBundle 'thinca/vim-template.git'
+au User plugin-template-loaded call s:template_keywords()
+function! s:template_keywords()
+  if search('${name}')
+    silent %s/\${name}/\=expand('%:t:r')/g
+  endif
+  if search('${fullname}')
+    silent %s/\${fullname}/\=expand('%:t')/g
+  endif
+  if search('${user}')
+    silent %s/\${user}/Denis Blokhin/g
+  endif
+  if search('${date}')
+    silent %s/\${date}/\=strftime('%Y-%m-%d')/g
+  endif
+  if search('${time}')
+    silent %s/\${time}/\=strftime('%H:%M:%S')/g
+  endif
+endfunction
+
+NeoBundle 'drmingdrmer/xptemplate.git'
+  let g:xptemplate_key='<Tab>'
+  let g:xptemplate_nav_next = '<C-j>'
+  let g:xptemplate_nav_prev = '<C-k>'
+  let g:xptemplate_highlight = ''
+  "let g:xptemplate_brace_complete = 1
+
+
+NeoBundle 'tpope/vim-surround'
+
+NeoBundle 'bling/vim-airline'
+  let g:airline_theme='dark'
+  set laststatus=2
+
+NeoBundle 'Raimondi/delimitMate.git'
+  let g:delimitMate_expand_cr = 1
+  let g:delimitMate_expand_space = 1
+  let g:delimitMate_matchpairs = "(:),[:],{:}"
+

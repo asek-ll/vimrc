@@ -1,0 +1,21 @@
+" vim:ft=vim:
+
+NeoBundle 'heavenshell/vim-jsdoc.git'
+  let g:jsdoc_additional_descriptions = 1
+  let g:jsdoc_allow_input_prompt = 1
+
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'vim-scripts/JavaScript-Indent'
+au FileType javascript call JavaScriptFold()
+
+"NeoBundle "pangloss/vim-javascript"
+
+"NeoBundle "maksimr/vim-jsbeautify"
+"let g:config_Beautifier = {}
+"let g:config_Beautifier.js = {
+      "\ 'indent_style': 'space',
+      "\ 'indent_size' : '2' }
+
+"NeoBundle "einars/js-beautify"
+"NeoBundle "marijnh/tern_for_vim"
+
