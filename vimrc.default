@@ -1,7 +1,8 @@
 ﻿" vim:ft=vim:
 
 let $VIMBASE=$HOME."/.vim"
-set nocompatible
+
+source $VIMBASE/startup/settings
 
 filetype off    
 
@@ -19,4 +20,4 @@ call neobundle#end()
 
 filetype plugin on
 
-source $VIMBASE/startup/settings
+colorscheme jellybeans

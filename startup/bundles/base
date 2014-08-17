@@ -1,8 +1,9 @@
 " vim:ft=vim:
 
 NeoBundle 'scrooloose/nerdtree.git'
+nmap <M-1> :NERDTreeFind<CR>
+nmap <M-F1> :NERDTreeFind<CR>
 nmap <F1> :NERDTreeToggle<CR>
-nmap <A-1> :NERDTreeFind<CR>
 
 NeoBundle 'Lokaltog/vim-easymotion'
 
