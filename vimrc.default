@@ -20,4 +20,4 @@ call neobundle#end()
 
 filetype plugin on
 
-colorscheme jellybeans
+silent! colorscheme jellybeans

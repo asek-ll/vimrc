@@ -1,6 +1,7 @@
 " vim:ft=vim:
 set nocompatible
 set encoding=UTF8
+let $LANG='en_Us.utf-8'
 
 set backspace=indent,eol,start
 set history=50
