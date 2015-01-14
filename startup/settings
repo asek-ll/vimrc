@@ -113,3 +113,4 @@ vmap <leader>p "0p
 nmap <F10> :so ~/.lastvimsess<CR>
 nmap <F11> :mks! ~/.vimsess<CR>
 nmap <F12> :so ~/.vimsess<CR>
+nmap <F9> <ESC>:exec g:runprg<CR>
