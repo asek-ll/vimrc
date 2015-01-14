@@ -55,3 +55,4 @@ NeoBundle 'Raimondi/delimitMate.git'
   let g:delimitMate_expand_space = 1
   let g:delimitMate_matchpairs = "(:),[:],{:}"
 
+NeoBundle 'terryma/vim-multiple-cursors'
