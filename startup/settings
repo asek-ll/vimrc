@@ -69,6 +69,7 @@ endif
 set cursorline
 set guioptions-=T
 set guioptions-=m
+set guioptions-=a
 set ignorecase
 "BACKUP
 
