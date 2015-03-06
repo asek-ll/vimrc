@@ -2,6 +2,7 @@
 
 NeoBundle 'scrooloose/nerdcommenter.git'
 nmap <C-K> <leader>ci
+vmap <C-K> <leader>ci
 
 NeoBundle 'majutsushi/tagbar.git'
 nmap <F2> :TagbarToggle<CR>
