@@ -14,12 +14,16 @@ let g:syntastic_javascript_jscs_args = "-c ". expand($VIMBASE . "/startup/bundle
 
 "NeoBundle "pangloss/vim-javascript"
 
-"NeoBundle "maksimr/vim-jsbeautify"
+NeoBundle "maksimr/vim-jsbeautify"
+NeoBundle "einars/js-beautify"
+let g:editorconfig_Beautifier = expand($VIMBASE . "/startup/bundles/javascript/.editorconfig")
+
+map <c-f> :call JsBeautify()<cr>
+"
 "let g:config_Beautifier = {}
 "let g:config_Beautifier.js = {
       "\ 'indent_style': 'space',
       "\ 'indent_size' : '2' }
 
-"NeoBundle "einars/js-beautify"
 "NeoBundle "marijnh/tern_for_vim"
 
