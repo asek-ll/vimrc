@@ -14,6 +14,8 @@ set wildmenu
 set listchars=eol:¬,tab:>-,nbsp:%
 set list
 
+set colorcolumn=80
+
 set foldlevelstart=3
 
 let $VIMBACKUPDIR=expand($VIMBASE.'/.vimbackup')
@@ -39,7 +41,7 @@ if has('gui_running')
   endif
 endif
 
-let g:XkbSwitchEnabled = 1 
+let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
 
 set keymap=russian-jcukenwin
@@ -58,7 +60,7 @@ set expandtab
 
 set nu
 set rnu
-set autoread 
+set autoread
 if has('mouse')
   if has('gui_running')
     set mouse=a
@@ -105,8 +107,8 @@ else
   set autoindent " always set autoindenting on
 endif " has("autocmd")
 
-nmap <C-Tab> gt 
-nmap <C-S-Tab> gT 
+nmap <C-Tab> gt
+nmap <C-S-Tab> gT
 
 nmap <leader>p "0p
 vmap <leader>p "0p
