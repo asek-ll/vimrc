@@ -43,7 +43,6 @@ NeoBundle 'drmingdrmer/xptemplate.git'
   let g:xptemplate_highlight = ''
   "let g:xptemplate_brace_complete = 1
 
-
 NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'bling/vim-airline'
@@ -56,3 +55,7 @@ NeoBundle 'Raimondi/delimitMate.git'
   let g:delimitMate_matchpairs = "(:),[:],{:}"
 
 NeoBundle 'terryma/vim-multiple-cursors'
+
+if has("win32")
+  set grepprg=findstr\ /n\ /s
+endif

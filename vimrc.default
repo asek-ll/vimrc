@@ -15,6 +15,7 @@ NeoBundle 'asek-ll/asek-ll.vim'
 
 source $VIMBASE/startup/bundles/base
 "source $VIMBASE/startup/bundles/programming
+"source $VIMBASE/startup/bundles/javascript/js
 
 call neobundle#end()
 
