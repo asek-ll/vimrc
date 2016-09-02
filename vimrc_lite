@@ -1,0 +1,44 @@
+﻿" vim:ft=vim:
+
+let $VIMBASE=$HOME."/vimfiles"
+
+set nocompatible
+set encoding=UTF8
+let $LANG='en_Us.utf-8'
+
+set backspace=indent,eol,start
+set history=50
+set ruler
+set showcmd
+set incsearch
+
+set clipboard=unnamed
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+if has('gui_running')
+  if has('gui_gtk')
+    set guifont=Ubuntu\ Mono\ 12
+  elseif has('gui_win32')
+    set guifont=Consolas:h12
+  endif
+endif
+
+set nu
+
+if has('mouse')
+  if has('gui_running')
+    set mouse=a
+  else
+    set mouse=nv
+  endif
+endif
+set cursorline
+set guioptions-=T
+set guioptions-=m
+set guioptions-=a
+set ignorecase
+

@@ -11,10 +11,10 @@ set incsearch
 
 set clipboard=unnamed
 set wildmenu
-set listchars=eol:¬,tab:>-,nbsp:%
+set listchars=eol:¬,trail:~,nbsp:%,tab:··
 set list
 
-set colorcolumn=80
+set colorcolumn=120
 
 set foldlevelstart=3
 
@@ -37,7 +37,7 @@ if has('gui_running')
   if has('gui_gtk')
     set guifont=Ubuntu\ Mono\ 14
   elseif has('gui_win32')
-    set guifont=Consolas:h14
+    set guifont=Consolas:h13
   endif
 endif
 
@@ -107,6 +107,11 @@ else
   set autoindent " always set autoindenting on
 endif " has("autocmd")
 
+if has("win32")
+  set shell=$COMSPEC
+endif
+
+
 nmap <C-Tab> gt
 nmap <C-S-Tab> gT
 
@@ -118,3 +123,6 @@ nmap <F11> :mks! ~/.vimsess<CR>
 nmap <F12> :so ~/.vimsess<CR>
 nmap <S-F9> <ESC>:make<CR>
 nmap <F9> <ESC>:exec g:runprg<CR>
+
+nmap <C-Down> :set fdl-=1<CR>
+nmap <C-Up> :set fdl+=1<CR>

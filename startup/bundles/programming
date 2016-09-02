@@ -16,6 +16,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_color_change_percent = 3
   let g:indent_guides_enable_on_vim_startup = 1
 
 NeoBundle 'tpope/vim-fugitive'

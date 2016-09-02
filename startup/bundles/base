@@ -9,7 +9,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'kien/ctrlp.vim.git'
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/](\.git|_x)$'
+      \ 'dir':  '\v[\/](\.git|_x|target)$'
       \ }
 
 nmap <F3> :CtrlP .<CR>
