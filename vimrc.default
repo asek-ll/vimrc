@@ -4,7 +4,7 @@ let $VIMBASE=$HOME."/.vim"
 
 source $VIMBASE/startup/settings
 
-filetype off    
+filetype off
 
 set rtp+=$VIMBASE/bundle/neobundle.vim/
 
