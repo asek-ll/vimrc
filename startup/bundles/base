@@ -7,7 +7,7 @@ nmap <F1> :NERDTreeToggle<CR>
 
 NeoBundle 'Lokaltog/vim-easymotion'
 
-NeoBundle 'kien/ctrlp.vim.git'
+NeoBundle 'ctrlpvim/ctrlp.vim.git'
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/](\.git|_x|target)$'
       \ }
