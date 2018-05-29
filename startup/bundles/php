@@ -1,6 +1,6 @@
 " vim:ft=vim:
 
-NeoBundle 'spf13/PIV.git'
+Plug 'spf13/PIV.git'
   let g:DisableAutoPHPFolding = 1 
 au BufRead,BufNewFile *.inc set ft=php
 au BufRead,BufNewFile *.install set ft=php

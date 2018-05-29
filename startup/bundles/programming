@@ -1,28 +1,28 @@
 " vim:ft=vim:
 
-NeoBundle 'scrooloose/nerdcommenter.git'
+Plug 'scrooloose/nerdcommenter'
 nmap <C-K> <leader>ci
 vmap <C-K> <leader>ci
 
-NeoBundle 'majutsushi/tagbar.git'
+Plug 'majutsushi/tagbar'
 nmap <F2> :TagbarToggle<CR>
 
-NeoBundle 'scrooloose/syntastic.git'
+Plug 'scrooloose/syntastic'
   let g:syntastic_enable_signs=1 
   let g:syntastic_css_checkers=['csslint', 'prettycss']
 
-NeoBundle 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
-NeoBundle 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
   let g:indent_guides_color_change_percent = 3
   let g:indent_guides_enable_on_vim_startup = 1
 
-NeoBundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
-NeoBundle 'lepture/vim-velocity'
-NeoBundle 'duganchen/vim-soy'
-"NeoBundle 'mhinz/vim-startify'
+Plug 'lepture/vim-velocity'
+Plug 'duganchen/vim-soy'
+"Plug 'mhinz/vim-startify'
 
-"NeoBundle 'jaxbot/brolink.vim'
+"Plug 'jaxbot/brolink.vim'

@@ -1,21 +1,23 @@
 " vim:ft=vim:
 
-NeoBundle 'heavenshell/vim-jsdoc.git'
+Plug 'heavenshell/vim-jsdoc'
   let g:jsdoc_additional_descriptions = 1
   let g:jsdoc_allow_input_prompt = 1
 
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'vim-scripts/JavaScript-Indent'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'vim-scripts/JavaScript-Indent'
 au FileType javascript call JavaScriptFold()
 
 let g:syntastic_javascript_checkers=['jshint', 'jscs']
 let g:syntastic_javascript_jshint_args = "-c ". expand($VIMBASE . "/startup/bundles/javascript/.jshintrc")
 let g:syntastic_javascript_jscs_args = "-c ". expand($VIMBASE . "/startup/bundles/javascript/.jscsrc")
 
-"NeoBundle "pangloss/vim-javascript"
+"Plug "pangloss/vim-javascript"
 
-NeoBundle "maksimr/vim-jsbeautify"
-"NeoBundle "einars/js-beautify"
+Plug 'maksimr/vim-jsbeautify'
+
+"Plug "einars/js-beautify"
+
 let g:editorconfig_Beautifier = expand($VIMBASE . "/startup/bundles/javascript/.editorconfig")
 
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -30,4 +32,4 @@ autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
-"NeoBundle "marijnh/tern_for_vim"
+"Plug "marijnh/tern_for_vim"

@@ -1,6 +1,6 @@
 " vim:ft=vim:
 
-NeoBundle 'Shougo/neocomplete'
+Plug 'Shougo/neocomplete'
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
