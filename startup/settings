@@ -9,7 +9,7 @@ set ruler
 set showcmd
 set incsearch
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 set wildmenu
 set listchars=eol:¬,trail:~,nbsp:%,tab:··
 set list
