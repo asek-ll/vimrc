@@ -7,17 +7,15 @@ vmap <C-K> <leader>ci
 Plug 'majutsushi/tagbar'
 nmap <F2> :TagbarToggle<CR>
 
-Plug 'scrooloose/syntastic'
-  let g:syntastic_enable_signs=1 
-  let g:syntastic_css_checkers=['csslint', 'prettycss']
+Plug 'dense-analysis/ale'
 
 Plug 'godlygeek/tabular'
 
 Plug 'Lokaltog/vim-easymotion'
 
-Plug 'nathanaelkane/vim-indent-guides'
-  let g:indent_guides_color_change_percent = 3
-  let g:indent_guides_enable_on_vim_startup = 1
+"Plug 'nathanaelkane/vim-indent-guides'
+  "let g:indent_guides_color_change_percent = 3
+  "let g:indent_guides_enable_on_vim_startup = 1
 
 Plug 'tpope/vim-fugitive'
 

@@ -11,7 +11,7 @@ set incsearch
 
 set clipboard=unnamedplus
 set wildmenu
-set listchars=eol:¬,trail:~,nbsp:%,tab:··
+set listchars=eol:¬,trail:~,nbsp:%,tab:>-
 set list
 
 set colorcolumn=120
@@ -121,8 +121,9 @@ vmap <leader>p "0p
 nmap <F10> :so ~/.lastvimsess<CR>
 nmap <F11> :mks! ~/.vimsess<CR>
 nmap <F12> :so ~/.vimsess<CR>
-nmap <S-F9> <ESC>:make<CR>
-nmap <F9> <ESC>:exec g:runprg<CR>
+nmap <S-F9> <ESC>:exec g:runprg<CR>
+nmap <F9> <ESC>:make!<CR>
+nmap <F7> :new term://zsh<CR><C-w>J
 
 nmap <C-Down> :set fdl-=1<CR>
 nmap <C-Up> :set fdl+=1<CR>

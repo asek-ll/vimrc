@@ -17,11 +17,22 @@ source $VIMBASE/startup/bundles/programming
 source $VIMBASE/startup/bundles/javascript/js
 
 Plug 'jceb/vim-orgmode'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+"
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+"
 
 call plug#end()
 
 filetype plugin on
 
-silent! colorscheme jellybeans
+silent! colorscheme zellner
+
+set guifont=JetBrains\ Mono:h16
+
+if exists('g:started_by_firenvim')
+  set guifont=JetBrains_Mono:h10
+endif
