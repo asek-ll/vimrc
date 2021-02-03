@@ -59,3 +59,17 @@ Plug 'terryma/vim-multiple-cursors'
 if has("win32")
   set grepprg=findstr\ /n\ /s
 endif
+
+"Plug 'ayu-theme/ayu-vim' " or other package manager
+"let ayucolor="light"  " for light version of theme
+"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+"Plug 'NLKNguyen/papercolor-theme'
+"set background=light
+
+"Plug 'kjssad/quantum.vim'
+"set background=dark     " dark theme
+ "set background=light  " light theme
+
+"Plug 'altercation/vim-colors-solarized'
+"set background=light

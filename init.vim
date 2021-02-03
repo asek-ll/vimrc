@@ -20,16 +20,16 @@ Plug 'jceb/vim-orgmode'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 
-"Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-"
-"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-"
+set termguicolors     " enable true colors support
+
+Plug 'NLKNguyen/papercolor-theme'
+set background=light
 
 call plug#end()
 
 filetype plugin on
 
-silent! colorscheme zellner
+silent! colorscheme PaperColor
 
 set guifont=JetBrains\ Mono:h16
 
